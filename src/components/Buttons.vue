@@ -149,7 +149,7 @@
       <div class="row">
         <div class="buttons-component">
           <p class="button-component-hoverText">&:hover, &:focus</p>
-          <div class="buttons-component-btns">
+          <div class="row">
             <button class="btn btn-hover">Default</button>
             <button class="btn btn-hover btn-primary">Primary</button>
             <button class="btn btn-hover btn-secondary">Secondary</button>
@@ -175,8 +175,11 @@ export default {
 
 <style lang="scss" scoped>
 #buttons {
-  padding: 50px 80px;
+  padding: 20px 20px;
 
+  @media screen and (min-width: 768px) {
+    padding: 50px 80px;
+  }
   .buttons-title {
     font-family: "Poppins", sans-serif;
     font-size: 24px;
@@ -190,15 +193,18 @@ export default {
     margin-bottom: 50px;
     .row {
       display: flex;
+      flex-wrap: wrap;
+      row-gap: 45px;
       column-gap: 60px;
       margin-bottom: 45px;
 
       .buttons-component {
-        min-width: 180px;
+        min-width: 105px;
         font-family: "Ubuntu Mono", monospace;
         font-size: 12px;
         font-weight: 500;
         line-height: 12px;
+        word-break: break-all;
 
         p {
           margin-bottom: 12px;
@@ -211,12 +217,6 @@ export default {
         .button-component-hoverText {
           color: #828282;
         }
-
-        .buttons-component-btns {
-          button {
-            margin-right: 120px;
-          }
-        }
       }
     }
   }
@@ -228,6 +228,7 @@ export default {
     line-height: 12px;
     color: #828282;
     margin-bottom: 30px;
+    word-break: break-all;
   }
 
   .copyright {
