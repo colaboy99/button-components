@@ -1,0 +1,9 @@
+/* -------------------- */
+/* Layout */
+/* -------------------- */
+
+#container {
+    width: 100%;
+    display: grid;
+    grid-template: minmax(100vh,100%) / minmax(80px,auto) 1fr;
+}
