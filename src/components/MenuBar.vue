@@ -144,10 +144,12 @@ export default {
       .tooltip {
         position: absolute;
         top: 0%;
-        left: 60px;
+        left: 80px;
         width: 120px;
         height: 35px;
-        color: $dark-tertiary;
+        color: $light-primary;
+        background-color: $dark-secondary;
+        border-radius: 8px;
         line-height: 35px;
         text-align: center;
         transform: translateY(-50%);
