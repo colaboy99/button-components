@@ -13,7 +13,7 @@
         :class="{ active: activeIndex === index }"
         v-for="(list, index) in lists"
         :key="index"
-        @click="listToggleActive(index)"
+        @click="listToggleActive(index,list['name'])"
       >
         <a href="#">
           <span class="material-icons-round"> {{ list["icon"] }} </span>
@@ -47,8 +47,10 @@ export default {
       this.isActive = !this.isActive;
     },
 
-    listToggleActive: function (index) {
+    listToggleActive: function (index, option) {
       this.activeIndex = index;
+      console.log(option)
+      this.$store.commit('ChangeComp',option)
     },
   },
 };
