@@ -1,6 +1,6 @@
 <template>
   <div id="colors">
-    Colors
+    <h2 class="head-title">Colors</h2>
   </div>
 </template>
 

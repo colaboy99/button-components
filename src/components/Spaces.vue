@@ -1,6 +1,6 @@
 <template>
   <div id="spaces">
-    Spaces
+    <h2 class="head-title">Sapces</h2>
   </div>
 </template>
 

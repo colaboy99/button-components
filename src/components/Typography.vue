@@ -1,6 +1,6 @@
 <template>
   <div id="typography">
-    Typography
+    <h2 class="head-title">Typography</h2>
   </div>
 </template>
 

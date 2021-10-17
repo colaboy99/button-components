@@ -28,12 +28,28 @@ export default {
     Colors,
     Spaces,
     Grid,
-    Typography
+    Typography,
   },
   computed: mapState(["ActiveComp"]),
 };
 </script>
 
 <style lang="scss">
-// APP
+#container {
+  .container-right-col {
+    padding: 20px 20px;
+
+    @media screen and (min-width: 768px) {
+      padding: 50px 80px;
+    }
+    .head-title {
+      font-family: "Poppins", sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px;
+      color: $dark-tertiary;
+      margin-bottom: 30px;
+    }
+  }
+}
 </style>

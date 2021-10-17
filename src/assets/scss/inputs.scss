@@ -1,0 +1,77 @@
+/* -------------------- */
+/* INPUTS */
+/* -------------------- */
+
+/* -------------------- */
+/* LABEL */
+/* -------------------- */
+
+label {
+  display: block;
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 17px;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+/* -------------------- */
+/* DEFAULT */
+/* -------------------- */
+input {
+  font-family: "Noto Sans SC", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #333;
+  border: 1px solid #828282;
+  border-radius: 8px;
+  padding: 18px 12px 18px 12px;
+
+  &:hover,
+  &.input-hover {
+    border: 1px solid #333;
+  }
+
+  &:focus,
+  &.input-focus {
+    outline: none;
+    border: 1px solid $primary;
+
+    + label {
+      color: $primary;
+    }
+  }
+
+  &::placeholder {
+    color: #828282;
+  }
+
+  &:invalid,
+  &.input-error {
+    border: 1px solid $danger;
+
+    &:hover,
+    &.input-hover {
+      border: 1px solid #333;
+      
+      + label {
+          color: #333;
+      }
+    }
+
+    &:focus,
+    &.input-error-focus {
+      border: 1px solid $danger;
+
+      + label {
+        color: $danger;
+      }
+    }
+
+    + label {
+      color: $danger;
+    }
+  }
+}

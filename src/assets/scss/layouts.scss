@@ -10,9 +10,11 @@
 
   .container-left-col {
     max-width: 240px;
+    min-height: 100vh;
   }
 
   .container-right-col {
     overflow: hidden;
+    min-height: 100vh;
   }
 }

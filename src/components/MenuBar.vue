@@ -10,10 +10,10 @@
     </div>
     <ul class="nav_list">
       <li
-        :class="{ active: activeIndex === index }"
+        :class="{ active: ActiveComp === list['name'] }"
         v-for="(list, index) in lists"
         :key="index"
-        @click="listToggleActive(index,list['name'])"
+        @click="listToggleActive(list['name'])"
       >
         <a href="#">
           <span class="material-icons-round"> {{ list["icon"] }} </span>
@@ -26,12 +26,12 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   name: "MenuBar",
   data() {
     return {
       isActive: true,
-      activeIndex: 3,
       lists: [
         { icon: "palette", name: "Colors" },
         { icon: "title", name: "Typography" },
@@ -47,12 +47,11 @@ export default {
       this.isActive = !this.isActive;
     },
 
-    listToggleActive: function (index, option) {
-      this.activeIndex = index;
-      console.log(option)
-      this.$store.commit('ChangeComp',option)
+    listToggleActive: function (option) {
+      this.$store.commit("ChangeComp", option);
     },
   },
+  computed: mapState(["ActiveComp"]),
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div id="grid">
-    Grid
+    <h2 class="head-title">Grid</h2>
   </div>
 </template>
 

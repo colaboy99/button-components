@@ -1,6 +1,6 @@
 <template>
   <div id="buttons">
-    <h2 class="buttons-title">Buttons</h2>
+    <h2 class="head-title">Buttons</h2>
 
     <div class="buttons-container">
       <div class="row">
@@ -169,26 +169,12 @@
 
 <script>
 export default {
-  name: "Buttons"
+  name: "Buttons",
 };
 </script>
 
 <style lang="scss" scoped>
 #buttons {
-  padding: 20px 20px;
-
-  @media screen and (min-width: 768px) {
-    padding: 50px 80px;
-  }
-  .buttons-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 36px;
-    color: $dark-tertiary;
-    margin-bottom: 30px;
-  }
-
   .buttons-container {
     margin-bottom: 50px;
     .row {
