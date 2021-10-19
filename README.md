@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center"> Design System</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://colaboy99.github.io/design-system/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://github.com/colaboy99/design-system">
       Solution
     </a>
     <span> | </span>
@@ -35,6 +35,9 @@
 <!-- OVERVIEW -->
 
 ## Overview
+![button-screenshot](https://user-images.githubusercontent.com/61030574/137978067-7040d190-f127-48cc-9f7d-511dbc480237.png)
+
+![input-screenshot](https://user-images.githubusercontent.com/61030574/137978135-5d02b2f8-08c3-4b48-97f8-16b248f8d357.png)
 
 
 ### Built With
