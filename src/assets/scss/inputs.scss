@@ -3,75 +3,154 @@
 /* -------------------- */
 
 /* -------------------- */
-/* LABEL */
-/* -------------------- */
-
-label {
-  display: block;
-  font-family: "Noto Sans SC", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 17px;
-  color: #333;
-  margin-bottom: 4px;
-}
-
-/* -------------------- */
 /* DEFAULT */
 /* -------------------- */
-input {
-  font-family: "Noto Sans SC", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  color: #333;
-  border: 1px solid #828282;
-  border-radius: 8px;
-  padding: 18px 12px 18px 12px;
 
-  &:hover,
-  &.input-hover {
-    border: 1px solid #333;
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-top: 16px;
+  max-width: 120px;
+
+  @media screen and (min-width: 320px) {
+    max-width: 200px;
   }
 
-  &:focus,
-  &.input-focus {
-    outline: none;
-    border: 1px solid $primary;
+  label {
+    position: absolute;
+    top: -4px;
+    display: block;
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #333;
+    margin-bottom: 4px;
+  }
 
-    + label {
-      color: $primary;
+  input, textarea {
+    font-family: "Noto Sans SC", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #333;
+    border: 1px solid #828282;
+    border-radius: 8px;
+    padding: 18px 12px 18px 12px;
+
+    ~ .helperText {
+      position: absolute;
+      bottom: -18px;
+      font-family: "Noto Sans SC", sans-serif;
+      font-size: 10px;
+      font-weight: 400;
+      line-height: 14px;
+      color: #828282;
     }
-  }
-
-  &::placeholder {
-    color: #828282;
-  }
-
-  &:invalid,
-  &.input-error {
-    border: 1px solid $danger;
 
     &:hover,
     &.input-hover {
       border: 1px solid #333;
-      
-      + label {
-          color: #333;
+
+      ~ .helperText {
+        color: #333;
       }
     }
 
     &:focus,
-    &.input-error-focus {
-      border: 1px solid $danger;
+    &.input-focus {
+      outline: none;
+      border: 1px solid $primary;
 
-      + label {
-        color: $danger;
+      ~ * {
+        color: $primary;
+      }
+
+      ~ .helperText {
+        color: $primary;
       }
     }
 
-    + label {
-      color: $danger;
+    &:disabled {
+      pointer-events: none;
+      border: 1px solid $light-primary;
     }
+
+    &::placeholder {
+      color: #828282;
+    }
+
+    &:invalid,
+    &.input-error {
+      border: 1px solid $danger;
+
+      ~ * {
+        color: $danger;
+      }
+
+      &:hover,
+      &.input-hover {
+        border: 1px solid #333;
+
+        ~ * {
+          color: #333;
+        }
+      }
+
+      &:focus,
+      &.input-focus {
+        border: 1px solid $danger;
+
+        ~ * {
+          color: $danger;
+        }
+      }
+    }
+  }
+
+  &.startIcon {
+    input {
+      padding-left: 45px;
+
+      ~ span[class*="icons"] {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        font-size: 18px;
+        color: #828282;
+      }
+    }
+  }
+
+  &.endIcon {
+    input {
+      padding-right: 45px;
+
+      ~ span[class*="icons"] {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        font-size: 18px;
+        color: #828282;
+      }
+    }
+  }
+
+  &.input-sm {
+    input {
+      padding: 10px 12px 10px 12px;
+    }
+  }
+
+  &.input-md {
+    input {
+      padding: 18px 12px 12px 12px;
+    }
+  }
+
+  &.input-fullWidth {
+    width: 100%;
+    max-width: none;
   }
 }

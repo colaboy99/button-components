@@ -149,21 +149,22 @@
       <div class="row">
         <div class="buttons-component">
           <p class="button-component-hoverText">&:hover, &:focus</p>
-          <div class="row">
-            <button class="btn btn-hover">Default</button>
-            <button class="btn btn-hover btn-primary">Primary</button>
-            <button class="btn btn-hover btn-secondary">Secondary</button>
-            <button class="btn btn-hover btn-danger">Danger</button>
-          </div>
+          <button class="btn btn-hover">Default</button>
+        </div>
+        <div class="buttons-component">
+          <p class="button-component-hoverText">&nbsp;</p>
+          <button class="btn btn-hover btn-primary">Primary</button>
+        </div>
+        <div class="buttons-component">
+          <p class="button-component-hoverText">&nbsp;</p>
+          <button class="btn btn-hover btn-secondary">Secondary</button>
+        </div>
+        <div class="buttons-component">
+          <p class="button-component-hoverText">&nbsp;</p>
+          <button class="btn btn-hover btn-danger">Danger</button>
         </div>
       </div>
     </div>
-
-    <p class="buttons-iconUrl">
-      Icons:
-      https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp
-    </p>
-    <p class="copyright">created by <span>colaboy99</span> - devchallenge.io</p>
   </div>
 </template>
 
@@ -178,10 +179,9 @@ export default {
   .buttons-container {
     margin-bottom: 50px;
     .row {
-      display: flex;
-      flex-wrap: wrap;
-      row-gap: 45px;
-      column-gap: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-row-gap: 45px;
       margin-bottom: 45px;
 
       .buttons-component {
@@ -203,29 +203,14 @@ export default {
         .button-component-hoverText {
           color: #828282;
         }
+
+        .button-row {
+          display: flex;
+          column-gap: 132px;
+          flex-wrap: wrap;
+          row-gap: 45px;
+        }
       }
-    }
-  }
-
-  .buttons-iconUrl {
-    font-family: "Ubuntu Mono", monospace;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 12px;
-    color: #828282;
-    margin-bottom: 30px;
-    word-break: break-all;
-  }
-
-  .copyright {
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 17px;
-    color: #a9a9a9;
-
-    span {
-      font-weight: 700;
     }
   }
 }

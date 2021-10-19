@@ -5,6 +5,15 @@
     </div>
     <div class="container-right-col">
       <component :is="ActiveComp"></component>
+      <p class="iconUrl">
+        Icons:
+        https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp
+      </p>
+      <p class="copyright">
+        created by
+        <a href="https://github.com/colaboy99" target="_blank">colaboy99</a> -
+        devchallenge.io
+      </p>
     </div>
   </div>
 </template>
@@ -37,11 +46,6 @@ export default {
 <style lang="scss">
 #container {
   .container-right-col {
-    padding: 20px 20px;
-
-    @media screen and (min-width: 768px) {
-      padding: 50px 80px;
-    }
     .head-title {
       font-family: "Poppins", sans-serif;
       font-size: 24px;

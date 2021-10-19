@@ -1,15 +1,40 @@
 /* -------------------- */
 /* IMPORTS */
 /* -------------------- */
-@import "variables" , "layouts" , "fonts", "buttons", "inputs";
-
+@import "variables", "layouts", "fonts", "buttons", "inputs";
 
 /* -------------------- */
 /* GLOBAL */
 /* -------------------- */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.iconUrl {
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  color: #828282;
+  margin-bottom: 30px;
+  word-break: break-all;
+}
+
+.copyright {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  color: #a9a9a9;
+
+  a {
+    text-decoration: none;
+    font-weight: 700;
+    color: $light-secondary;
+  }
+}
+
+

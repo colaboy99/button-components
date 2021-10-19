@@ -31,7 +31,7 @@ export default {
   name: "MenuBar",
   data() {
     return {
-      isActive: true,
+      isActive: false,
       lists: [
         { icon: "palette", name: "Colors" },
         { icon: "title", name: "Typography" },
@@ -41,6 +41,11 @@ export default {
         { icon: "grid_3x3", name: "Grid" },
       ],
     };
+  },
+  mounted() {
+    if(window.innerWidth>768) {
+      this.isActive = !this.isActive;
+    }
   },
   methods: {
     toggleActive: function () {
@@ -157,6 +162,7 @@ export default {
         transition: 0s;
         opacity: 0;
         pointer-events: none;
+        z-index: 10;
       }
 
       &:hover {
