@@ -10,7 +10,10 @@
     </div>
     <ul class="nav_list">
       <li
-        :class="{ active: ActiveComp === list['name'] }"
+        :class="{
+          active: ActiveComp === list['name'],
+          disabled: list['name'] != 'Buttons' && list['name'] != 'Inputs',
+        }"
         v-for="(list, index) in lists"
         :key="index"
         @click="listToggleActive(list['name'])"
@@ -43,7 +46,7 @@ export default {
     };
   },
   mounted() {
-    if(window.innerWidth>768) {
+    if (window.innerWidth > 768) {
       this.isActive = !this.isActive;
     }
   },
@@ -53,7 +56,8 @@ export default {
     },
 
     listToggleActive: function (option) {
-      this.$store.commit("ChangeComp", option);
+      if (option == "Buttons" || option == "Inputs")
+        this.$store.commit("ChangeComp", option);
     },
   },
   computed: mapState(["ActiveComp"]),
@@ -204,7 +208,7 @@ export default {
         a {
           .links_name {
             opacity: 1;
-            pointer-events: auto;
+            //pointer-events: auto;
           }
         }
         .tooltip {
@@ -212,6 +216,11 @@ export default {
         }
       }
     }
+  }
+
+  .disabled {
+    pointer-events: none;
+    opacity: 0.6;
   }
 }
 </style>
